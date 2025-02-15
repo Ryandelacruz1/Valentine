@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ff99cc);
+            transition: background 1s ease;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #d10000;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            transition: transform 0.5s ease;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 22px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .no {
+            background-color: #808080;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+        .no:hover {
+            background-color: #666;
+            transform: scale(0.9);
+        }
+        .video-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        video {
+            display: block;
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            button {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="question">Do you love me? ❤️</h1>
+        <div class="buttons">
+            <button class="yes" id="yes">Yes</button>
+            <button class="no" id="no">No</button>
+        </div>
+        <div class="video-container">
+            <video width="320" height="240" controls autoplay loop muted>
+                <source src="video/valentine1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById("yes");
+        const noBtn = document.getElementById("no");
+        const question = document.getElementById("question");
+
+        yesBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#ff4d4d";
+            question.style.transform = "scale(1.2)";
+            setTimeout(() => {
+                window.location.href = "yes.html";
+            }, 1000);
+        });
+
+        noBtn.addEventListener("click", function() {
+            let currentSize = parseFloat(window.getComputedStyle(noBtn).fontSize);
+            if (currentSize > 5) {
+                noBtn.style.fontSize = (currentSize - 5) + "px";
+                noBtn.style.transform = "rotate(-10deg)";
+            } else {
+                noBtn.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

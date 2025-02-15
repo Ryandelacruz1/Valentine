@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ff99cc);
+            transition: background 1s ease;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #d10000;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .message {
+            font-size: 2em;
+            color: white;
+            background-color: #ff4d4d;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .back-button {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #ff4d4d;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        button:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+        .video-container {
+            margin-top: 30px;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>❤️ I Love You too! ❤️</h1>
+        <div class="message">From: Ryan❤️</div>
+        <div class="message">My love, thank you for always being there for me. 
+            Your patience, understanding, and unwavering love mean everything to me. 
+            I am so grateful for the way you care for me, and I hope you never grow tired of us. 
+            You are my heart, my happiness, and my forever. 
+            I love you more than words can express!</div>
+        <div class="video-container">
+            <video width="320" height="240" controls autoplay loop muted>
+                <source src="video/love.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="back-button">
+            <button onclick="window.location.href='index.html'">Back</button>
+        </div>
+    </div>
+</body>
+</html>
